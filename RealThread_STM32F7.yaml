@@ -1,0 +1,7274 @@
+---
+vendor: RealThread
+dvendor: STMicroelectronics
+name: RealThread_STM32F7
+version: 1.0.0
+type: Chip_Support_Package
+family_name: STM32
+series:
+  description: |-
+    The STM32F7 family incorporates high-speed embedded memories and an extensive range of enhanced I/Os and peripherals connected to two APB buses, three AHB buses and a 32-bit multi-AHB bus matrix.
+
+      - 64-Kbyte of CCM (core coupled memory) data RAM
+      - LCD parallel interface, 8080/6800 modes
+      - Timer with quadrature (incremental) encoder input
+      - 5 V-tolerant I/Os
+      - Parallel camera interface
+      - True random number generator
+      - RTC: subsecond accuracy, hardware calendar
+      - 96-bit unique ID
+  cpu_info:
+    core: Cortex-M7
+    mpu: MPU
+    endian: Little-endian
+  peripheral:
+    Timer: '2'
+    WDT: '2'
+    RTC: '32768'
+    I2S: '2'
+    Temp: "-40"
+  sub_series:
+  - sub_series_name: STM32F745
+    marco:
+    - STM32F745xx
+    source_files:
+    - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F745ZG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F745ZG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f745xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F745ZE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F745ZE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f745xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F745VG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F745VG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f745xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F745VE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F745VE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f745xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F745IG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F745IG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f745xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F745IE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F745IE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f745xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F7x5_v1r1.svd
+    cpu_info:
+      max_clock: '216000000'
+    docs:
+    - documents/DM00124865.pdf
+    - documents/DM00166116.pdf
+    peripheral: {}
+  - sub_series_name: STM32F746
+    marco:
+    - STM32F746xx
+    source_files:
+    - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F746ZG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F746ZG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f746xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F746VG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F746VG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f746xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F746IG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F746IG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f746xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F746BG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F746BG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f746xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F746NG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F746NG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f746xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F746ZE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F746ZE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f746xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F746VE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F746VE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f746xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F746IE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F746IE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f746xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F746BE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F746BE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f746xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F746NE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F746NE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f746xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F7x6_v1r1.svd
+    cpu_info:
+      max_clock: '216000000'
+    docs:
+    - documents/DM00124865.pdf
+    - documents/DM00166116.pdf
+    peripheral: {}
+  - sub_series_name: STM32F756
+    marco:
+    - STM32F756xx
+    source_files:
+    - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F756ZG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F756ZG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f756xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F756VG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F756VG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f756xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F756IG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F756IG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f756xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F756BG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F756BG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f756xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F756NG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F756NG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f756xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F7x6_v1r1.svd
+    cpu_info:
+      max_clock: '216000000'
+    docs:
+    - documents/DM00124865.pdf
+    - documents/DM00166114.pdf
+    peripheral: {}
+  - sub_series_name: STM32F765
+    marco:
+    - STM32F765xx
+    source_files:
+    - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F765BG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F765BG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f765xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F765BI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F765BI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f765xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F765IG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F765IG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f765xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F765II
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F765II\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f765xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F765NG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F765NG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f765xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F765NI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F765NI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f765xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F765VG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F765VG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f765xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F765VI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F765VI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f765xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F765ZG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F765ZG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f765xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F765ZI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F765ZI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f765xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F7x5_v1r1.svd
+    cpu_info:
+      max_clock: '216000000'
+    docs:
+    - documents/DM00224583.pdf
+    - documents/DM00273119.pdf
+    peripheral: {}
+  - sub_series_name: STM32F767
+    marco:
+    - STM32F767xx
+    source_files:
+    - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F767BI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F767BI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f767xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F767BG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F767BG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f767xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F767NI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F767NI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f767xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F767NG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F767NG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f767xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F767II
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F767II\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f767xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F767IG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F767IG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f767xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F767ZI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F767ZI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f767xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F767ZG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F767ZG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f767xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F767VI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F767VI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f767xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F767VG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F767VG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f767xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F7x7_v1r2.svd
+    cpu_info:
+      max_clock: '216000000'
+    docs:
+    - documents/DM00224583.pdf
+    - documents/DM00273119.pdf
+    peripheral: {}
+  - sub_series_name: STM32F768
+    marco:
+    - STM32F767xx
+    source_files:
+    - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F768AI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F768AI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f767xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F7x9_v1r2.svd
+    cpu_info:
+      max_clock: '216000000'
+    docs:
+    - documents/DM00224583.pdf
+    - documents/DM00273119.pdf
+    peripheral: {}
+  - sub_series_name: STM32F769
+    marco:
+    - STM32F769xx
+    source_files:
+    - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F769BI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F769BI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f769xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F769BG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F769BG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f769xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F769NI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F769NI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f769xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F769NG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F769NG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f769xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F769II
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F769II\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f769xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F769IG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F769IG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f769xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F769AI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F769AI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f769xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F769AG
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F769AG\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f769xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x100000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x100000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F7x9_v1r2.svd
+    cpu_info:
+      max_clock: '216000000'
+    docs:
+    - documents/DM00224583.pdf
+    - documents/DM00273119.pdf
+    peripheral: {}
+  - sub_series_name: STM32F777
+    marco:
+    - STM32F777xx
+    source_files:
+    - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F777BI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F777BI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f777xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F777NI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F777NI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f777xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F777II
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F777II\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f777xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F777ZI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F777ZI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f777xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F777VI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F777VI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f777xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F7x7_v1r2.svd
+    cpu_info:
+      max_clock: '216000000'
+    docs:
+    - documents/DM00224583.pdf
+    - documents/DM00225424.pdf
+    peripheral: {}
+  - sub_series_name: STM32F778
+    marco:
+    - STM32F777xx
+    source_files:
+    - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F778AI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F778AI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f777xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F7x9_v1r2.svd
+    cpu_info:
+      max_clock: '216000000'
+    docs:
+    - documents/DM00224583.pdf
+    - documents/DM00225424.pdf
+    peripheral: {}
+  - sub_series_name: STM32F779
+    marco:
+    - STM32F779xx
+    source_files:
+    - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F779BI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F779BI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f779xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F779NI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F779NI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f779xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F779II
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F779II\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f779xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F779AI
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F779AI\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f779xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20020000'
+            size: '0x60000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x20000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x200000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x200000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F7x9_v1r2.svd
+    cpu_info:
+      max_clock: '216000000'
+    docs:
+    - documents/DM00224583.pdf
+    - documents/DM00225424.pdf
+    peripheral: {}
+  - sub_series_name: STM32F732
+    marco:
+    - STM32F732xx
+    source_files:
+    - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F732VE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F732VE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f732xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F732RE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F732RE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f732xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F732ZE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F732ZE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f732xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F732IE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F732IE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f732xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F7x2_v1r0.svd
+    cpu_info:
+      max_clock: '216000000'
+    docs:
+    - documents/DM00305990.pdf
+    - documents/DM00330507.pdf
+    peripheral: {}
+  - sub_series_name: STM32F722
+    marco:
+    - STM32F722xx
+    source_files:
+    - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F722VE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F722VE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f722xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F722RE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F722RE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f722xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F722ZE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F722ZE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f722xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F722IE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F722IE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f722xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F722RC
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F722RC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f722xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x40000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x40000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F722VC
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F722VC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f722xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x40000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x40000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F722ZC
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F722ZC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f722xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x40000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x40000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F722IC
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F722IC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f722xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x40000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x40000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F7x2_v1r0.svd
+    cpu_info:
+      max_clock: '216000000'
+    docs:
+    - documents/DM00305990.pdf
+    - documents/DM00330506.pdf
+    peripheral: {}
+  - sub_series_name: STM32F733
+    marco:
+    - STM32F733xx
+    source_files:
+    - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F733VE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F733VE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f733xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F733ZE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F733ZE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f733xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F733IE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F733IE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f733xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F7x3_v1r0.svd
+    cpu_info:
+      max_clock: '216000000'
+    docs:
+    - documents/DM00305990.pdf
+    - documents/DM00330507.pdf
+    peripheral: {}
+  - sub_series_name: STM32F723
+    marco:
+    - STM32F723xx
+    source_files:
+    - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F723VE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F723VE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f723xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F723ZE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F723ZE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f723xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F723IE
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F723IE\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f723xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x80000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x80000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F723ZC
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F723ZC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f723xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x40000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x40000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F723IC
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F723IC\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f723xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x40000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x40000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F7x3_v1r0.svd
+    cpu_info:
+      max_clock: '216000000'
+    docs:
+    - documents/DM00305990.pdf
+    - documents/DM00330506.pdf
+    peripheral: {}
+  - sub_series_name: STM32F730
+    marco:
+    - STM32F730xx
+    source_files:
+    - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F730R8
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F730R8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f730xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x10000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x10000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F730V8
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F730V8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f730xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x10000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x10000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F730Z8
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F730Z8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f730xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x10000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x10000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F730I8
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F730I8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f730xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x30000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x10000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x10000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F730x.svd
+    cpu_info:
+      max_clock: '216000000'
+    docs:
+    - documents/DM00305990.pdf
+    - documents/stm32f730i8.pdf
+    peripheral: {}
+  - sub_series_name: STM32F750
+    marco:
+    - STM32F750xx
+    source_files:
+    - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+    compiler:
+      gcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      armcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+      iarcc:
+        entry_point: none
+        link_script: none
+        marco: []
+        files: []
+    debug:
+      jlink:
+        files: []
+      stlink:
+        files: []
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco: []
+        source_files: []
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco: []
+        source_files: []
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco: []
+        source_files: []
+    chips:
+    - chip_name: STM32F750V8
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F750V8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f750xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x10000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x10000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F750Z8
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F750Z8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f750xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x10000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x10000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    - chip_name: STM32F750N8
+      marco: []
+      source_files: []
+      docs: []
+      peripheral: {}
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: chips\STM32F750N8\link.lds
+          marco: []
+          files:
+          - src\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f750xx.S
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+      debug:
+        jlink:
+          files: []
+        stlink:
+          files: []
+      memory:
+        memory_list:
+          IRAM1:
+            addr: '0x20010000'
+            size: '0x40000'
+          IRAM2:
+            addr: '0x20000000'
+            size: '0x10000'
+          IROM1:
+            addr: '0x08000000'
+            size: '0x10000'
+          IROM2:
+            addr: '0x00200000'
+            size: '0x10000'
+        default_ram: IRAM2
+        default_rom: IROM1
+        start_up: IROM1
+      project_type:
+        bare_metal:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            sysTick: none
+          marco: []
+          source_files: []
+        rtt_nano:
+          function_map:
+            clk_init: none
+            uart_init: none
+            putc: none
+            getc: none
+            sysTick: none
+            heap_init: none
+          marco: []
+          source_files: []
+        rtt:
+          function_map:
+            rt_hw_board_init;: none
+            rt_hw_serial_register: none
+            rt_hw_pin_register: none
+            heap_init: none
+          marco: []
+          source_files: []
+    svd: debug/svd/STM32F750x.svd
+    cpu_info:
+      max_clock: '216000000'
+    docs:
+    - documents/DM00124865.pdf
+    - documents/stm32f750n8.pdf
+    peripheral: {}
+  series_name: RealThread_STM32F7xx
+  docs:
+  - documents/DM00189702.pdf
+  - documents/DUI0646B_cortex_m7_dgug.pdf
+  source_files:
+  - src/Drivers/STM32F7xx_HAL_Driver
+  - src/Drivers/CMSIS/Include
+  - src/Drivers/CMSIS/RTOS
+  - src/Drivers/CMSIS/Device/ST/STM32F7xx/Include
+  - src/Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/system_stm32f7xx.c
+  compiler:
+    gcc:
+      entry_point: ''
+      link_script: ''
+      marco: []
+      files:
+      - src/Drivers/CMSIS/Lib/GCC
+    armcc:
+      entry_point: none
+      link_script: none
+      marco:
+      - none
+      files:
+      - none
+    iarcc:
+      entry_point: none
+      link_script: none
+      marco:
+      - none
+      files:
+      - none
+  debug:
+    jlink:
+      files: []
+    stlink:
+      files: []
+  project_type:
+    bare_metal:
+      function_map:
+        clk_init: none
+        uart_init: none
+        putc: none
+        sysTick: none
+      marco:
+      - SOC_FAMILY_STM32
+      - SOC_SERIES_STM32F7
+      - USE_HAL_DRIVER
+      source_files:
+      - src/baremetal-port
+    rtt_nano:
+      function_map:
+        clk_init: none
+        uart_init: none
+        putc: none
+        getc: none
+        sysTick: none
+        heap_init: none
+      marco:
+      - SOC_FAMILY_STM32
+      - SOC_SERIES_STM32F7
+      - USE_HAL_DRIVER
+      source_files:
+      - src/nano-port
+    rtt:
+      function_map:
+        rt_hw_board_init;: none
+        rt_hw_serial_register: none
+        rt_hw_pin_register: none
+        heap_init: none
+      marco:
+      - SOC_FAMILY_STM32
+      - SOC_SERIES_STM32F7
+      - USE_HAL_DRIVER
+      source_files:
+      - src/rtt-port
+  marco: []
+  ui:
+    uart:
+      default_value: UART1
+      prompt_message_en: select one uart as console output interface
+      prompt_message_zh: 选择一个串口作为控制台信息输出接口
+    tx_pin:
+      default_value: PA9
+      prompt_message_en: 'set the tx pin name of the console device interface, the
+        value should be with a format"P+[port name][pin number]",eg. PA2,PB6 '
+      prompt_message_zh: 设置控制台设备的数据发送引脚的名称, 名称应该具有以下格式“P+[端口名称][端口编号]”, 比如：PA2, PB6
+    rx_pin:
+      default_value: PA10
+      prompt_message_en: 'set the rx pin name of the console device interface, the
+        value should be with a format"P+[port name][pin number]", eg. PA3, PB7 '
+      prompt_message_zh: 设置控制台设备的数据发送引脚的名称，名称应该具有以下格式“P+[端口名称][端口编号]”, 比如：PA2, PB6
