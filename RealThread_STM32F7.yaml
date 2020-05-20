@@ -17,7 +17,7 @@ series:
       - True random number generator
       - RTC: subsecond accuracy, hardware calendar
       - 96-bit unique ID
-  series_name: RealThread_STM32F7xx
+  series_name: STM32F7
   peripheral: {}
   sub_series:
   - sub_series_name: STM32F745
