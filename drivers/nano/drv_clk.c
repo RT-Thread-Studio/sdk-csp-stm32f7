@@ -39,13 +39,13 @@ void system_clock_config(int target_freq_mhz)
     RCC_OscInitStruct.PLL.PLLQ = 2;
     if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
     {
-      Error_Handler();
+        Error_Handler();
     }
     /** Activate the Over-Drive mode
     */
     if (HAL_PWREx_EnableOverDrive() != HAL_OK)
     {
-      Error_Handler();
+        Error_Handler();
     }
     /** Initializes the CPU, AHB and APB busses clocks
     */
@@ -58,7 +58,7 @@ void system_clock_config(int target_freq_mhz)
 
     if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_7) != HAL_OK)
     {
-      Error_Handler();
+        Error_Handler();
     }
 }
 
