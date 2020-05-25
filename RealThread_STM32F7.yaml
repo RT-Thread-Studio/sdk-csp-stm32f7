@@ -2,7 +2,7 @@
 vendor: RealThread
 dvendor: STMicroelectronics
 name: STM32F7
-version: 0.1.6
+version: 0.1.7
 yaml_version: 1
 type: Chip_Support_Packages
 family_name: STM32
@@ -218,7 +218,7 @@ series:
         - STM32F745xx
         files:
         - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f745xx.S
-        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f745xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -585,7 +585,7 @@ series:
         - STM32F746xx
         files:
         - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f746xx.S
-        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f746xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -817,7 +817,7 @@ series:
         - STM32F756xx
         files:
         - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f756xx.S
-        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f756xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -1184,7 +1184,7 @@ series:
         - STM32F765xx
         files:
         - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f765xx.S
-        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f765xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -1551,7 +1551,7 @@ series:
         - STM32F767xx
         files:
         - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f767xx.S
-        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f767xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -1675,7 +1675,7 @@ series:
         - STM32F767xx
         files:
         - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f767xx.S
-        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f767xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -1988,7 +1988,7 @@ series:
         - STM32F769xx
         files:
         - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f769xx.S
-        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f769xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -2220,7 +2220,7 @@ series:
         - STM32F777xx
         files:
         - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f777xx.S
-        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f777xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -2344,7 +2344,7 @@ series:
         - STM32F777xx
         files:
         - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f777xx.S
-        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f777xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -2549,7 +2549,7 @@ series:
         - STM32F779xx
         files:
         - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f779xx.S
-        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f779xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -2754,7 +2754,7 @@ series:
         - STM32F732xx
         files:
         - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f732xx.S
-        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f732xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -3067,7 +3067,7 @@ series:
         - STM32F722xx
         files:
         - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f722xx.S
-        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f722xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -3245,7 +3245,7 @@ series:
         - STM32F733xx
         files:
         - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f733xx.S
-        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f733xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -3477,7 +3477,7 @@ series:
         - STM32F723xx
         files:
         - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f723xx.S
-        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f723xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -3682,7 +3682,7 @@ series:
         - STM32F730xx
         files:
         - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f730xx.S
-        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f730xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -3860,7 +3860,7 @@ series:
         - STM32F750xx
         files:
         - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\gcc\startup_stm32f750xx.S
-        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+        - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f750xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -3932,7 +3932,8 @@ series:
     - libraries\STM32F7xx_HAL_Driver
     - libraries\CMSIS\Include
     - libraries\CMSIS\RTOS
-    - libraries\CMSIS\Device\ST\STM32F7xx\Include
+    - libraries\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h
+    - libraries\CMSIS\Device\ST\STM32F7xx\Include\system_stm32f7xx.h
     - libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\system_stm32f7xx.c
   cpu_info:
     max_clock: '216000000'
